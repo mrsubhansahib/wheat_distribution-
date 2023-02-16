@@ -1,0 +1,25 @@
+Here's how the calculation works:
+
+1:The values of the two input fields with the ids total_members 
+and average_chapaties are retrieved using the document.getElementById()
+method and stored in the variables total_members and average_chapaties.
+
+2:The number of chapatis consumed by the entire family in a year
+ is calculated by multiplying the number of members by the average
+ number of chapatis each person eats per day, and then multiplying
+ that value by 365. This result is stored in the variable 
+total_chapaties_in_an_year.
+
+3:The total weight of the chapatis is then calculated by multiplying
+ total_chapaties_in_an_year by the average weight of a single
+ chapati, which is assumed to be 60 grams. The result is stored
+ in the variable total_chapaties_weight.
+
+4:Finally, the total weight of wheat needed to make the chapatis
+ is calculated by dividing total_chapaties_weight
+ by 1000 (to convert grams to kilograms) and storing the
+ result in the variable total_wheat.
+
+5:The result of the calculation is then set as the value
+ of the HTML input field with the id total_wheat by using the 
+document.getElementById("total_wheat").value = total_wheat + "Kg"; statement.

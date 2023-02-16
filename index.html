@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon / Icon shown on Tab -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png" sizes="32*32" >
+    <!-- Project Title -->
+    <title>Landing Page</title>
+    <!-- Linked CSS Files -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstarp.min.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Main Content of Page -->
+    <div id="body-content">
+        <div class="container">
+            <div class="main-block mt-5">
+                <h1>Wheat Calculator</h1>
+                <form>
+                  <hr>
+                  
+                  <hr>
+                  <label id="icon" for="total_members"><i class="fas fa-user"></i></label>
+                  <input type="number" name="total_members" id="total_members" placeholder="Total Members" required/>
+                  <label id="icon" for="average_chapaties"><i class="fa-solid fa-bowl-food"></i></label>
+                  <input type="number" name="average_chapaties" id="average_chapaties" placeholder="Average Chapati eaten by One person" required/>
+                  <hr>
+
+                  <hr>
+                  <div class="btn-block">
+                    <button type="button"  onclick="calculate()">Calculate</button>
+                  </div>
+                  <h6 id="results" for="average_chapaties">Wheat eaten by the family in the whole year:</h6>
+                  <input type="text" name="total_wheat" id="total_wheat" placeholder="Total Weight" readonly>
+                  
+                </form>
+              </div>
+        </div>
+    </div>
+    <!-- Content Ends -->
+
+
+        
+    <!-- Linked Js Files -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function calculate(){
+            let total_members = document.getElementById("total_members").value;
+            let average_chapaties = document.getElementById("average_chapaties").value;
+            let total_chapaties_in_an_year = average_chapaties * total_members * 365;
+            let total_chapaties_weight =  total_chapaties_in_an_year * 60;
+            let total_wheat = total_chapaties_weight / 1000;
+            document.getElementById("total_wheat").value = total_wheat + " Kgs";
+        }
+    </script>
+</body>
+</html>
